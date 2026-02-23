@@ -1,18 +1,32 @@
-# Splunk Investigation Lab
+# Splunk Investigations
 
-## Scenario
-Simulated SOC Level 1 investigation using Splunk SIEM.
+This folder contains documented security investigations performed using Splunk Enterprise in a simulated SOC environment.
 
-## Objectives
-- Analyze log events
-- Identify suspicious activity
-- Use SPL queries for detection
-- Correlate events
-- Investigate IP activity
+Each investigation includes:
+- Scenario overview
+- SPL queries used
+- Evidence screenshots (where applicable)
+- Findings summary
+- Security assessment
+- Recommended next steps
 
-## Key Skills Practiced
-- Log searching and filtering
-- SPL query writing
-- Event correlation
-- Dashboard review
-- Alert triage
+---
+
+## Investigations Included
+
+### 1. 4624 Network Logon Analysis
+- Analyzed successful Windows authentication events
+- Identified network-based logon activity (Logon Type 3)
+- Correlated source IP address
+- Evaluated potential lateral movement indicators
+
+---
+
+## Skills Demonstrated
+
+- Splunk SPL Query Writing
+- Windows Event Log Analysis
+- Authentication Monitoring
+- IP Correlation
+- SOC Investigation Documentation
+- Threat Hunting Methodology
