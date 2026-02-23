@@ -1,3 +1,10 @@
+### MITRE ATT&CK Mapping
+
+Technique: T1110 – Brute Force  
+Tactic: Credential Access  
+
+Repeated failed authentication attempts may indicate brute-force activity targeting valid user accounts.
+
 # ELK Investigation Lab
 
 ## Overview
