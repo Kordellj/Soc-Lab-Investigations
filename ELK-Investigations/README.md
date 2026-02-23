@@ -60,3 +60,10 @@ If repeated failures are observed from a single IP:
 - Correlate timestamps
 - Check geo-location anomalies
 - Escalate per incident response plan if threshold exceeded
+
+### MITRE ATT&CK Mapping
+
+Technique: T1110 – Brute Force  
+Tactic: Credential Access  
+
+Repeated failed authentication attempts may indicate brute-force activity targeting valid user accounts.
