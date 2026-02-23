@@ -1,49 +1,21 @@
-## Investigation Summary
+# ELK Investigation: Suspicious VPN Activity
 
-**Scenario:** Multiple failed VPN login attempts observed in ELK  
-**Detection Goal:** Identify potential brute-force activity  
-**Tool Used:** Elastic Stack (ELK)  
+## Investigation Summary
+Multiple failed VPN login attempts observed in ELK.
+
+**Detection Goal:** Identify potential brute-force activity.  
 **Data Source:** VPN authentication logs  
-**MITRE Mapping:** T1110 – Brute Force (Credential Access)
-
-## Overview
-This lab documents hands-on investigation work using the Elastic Stack (ELK) as a SIEM platform.
-
-## Objectives
-- Analyze VPN logs
-- Identify suspicious login patterns
-- Perform log filtering and search queries
-- Create dashboards and visualizations
-- Detect potential malicious behavior
-
-## Tools Used
-- Elasticsearch
-- Logstash
-- Kibana
-- TryHackMe ELK Lab Environment
-
-## Investigation Summary
-
-### Scenario
-Investigated VPN logs to identify unusual login activity and possible brute-force behavior.
-
-### Key Findings
-- Identified high-volume login attempts from a single IP address
-- Detected abnormal login times outside standard business hours
-- Observed repeated failed login attempts followed by successful authentication
-
-### Skills Practiced
-- Log searching and filtering
-- Query building
-- Event correlation
-- Dashboard creation
-- Threat pattern recognition
+**MITRE Mapping:** T1110 – Brute Force  
 
 ---
 
-More labs will be added as skills expand.
+## Scenario
+Several failed authentication attempts were detected from a single external IP address outside of normal business hours.
 
-## Example Query Used
+---
+
+## Detection Logic
+Example Query Used:
 
 GET vpn-logs/_search
 {
@@ -54,22 +26,33 @@ GET vpn-logs/_search
   }
 }
 
-### What This Does
 
-- Filters VPN authentication logs for failed login attempts  
-- Helps identify potential brute-force or credential stuffing activity  
-- Supports early-stage incident detection and triage within a SOC environment  
 
-### Analyst Action
+---
 
-If repeated failures are observed from a single IP:
-- Correlate timestamps
-- Check geo-location anomalies
-- Escalate per incident response plan if threshold exceeded
+## Key Findings
+- High volume of failed logins from one IP
+- Activity outside business hours
+- Pattern consistent with brute-force attempts
 
-### MITRE ATT&CK Mapping
+---
 
-Technique: T1110 – Brute Force  
-Tactic: Credential Access  
+## Analyst Response
+- Verified account status
+- Checked geo-location of source IP
+- Escalated per incident response plan
+- Recommended temporary account lockout
 
-Repeated failed authentication attempts may indicate brute-force activity targeting valid user accounts.
+---
+
+## MITRE ATT&CK Mapping
+- Technique: T1110 – Brute Force
+- Tactic: Credential Access
+
+---
+
+## Skills Demonstrated
+- Log filtering and analysis
+- Pattern recognition
+- Incident triage workflow
+- MITRE ATT&CK mapping
