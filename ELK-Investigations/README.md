@@ -36,3 +36,18 @@ Investigated VPN logs to identify unusual login activity and possible brute-forc
 ---
 
 More labs will be added as skills expand.
+
+## Example Query Used
+
+GET vpn-logs/_search
+{
+  "query": {
+    "match": {
+      "event.outcome": "failure"
+    }
+  }
+}
+
+### What This Does
+This query filters VPN authentication logs to identify failed login attempts.  
+Used to detect possible brute-force behavior.
