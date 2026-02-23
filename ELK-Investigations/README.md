@@ -49,5 +49,14 @@ GET vpn-logs/_search
 }
 
 ### What This Does
-This query filters VPN authentication logs to identify failed login attempts.  
-Used to detect possible brute-force behavior.
+
+- Filters VPN authentication logs for failed login attempts  
+- Helps identify potential brute-force or credential stuffing activity  
+- Supports early-stage incident detection and triage within a SOC environment  
+
+### Analyst Action
+
+If repeated failures are observed from a single IP:
+- Correlate timestamps
+- Check geo-location anomalies
+- Escalate per incident response plan if threshold exceeded
