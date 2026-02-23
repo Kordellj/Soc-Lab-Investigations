@@ -18,24 +18,28 @@ Each investigation includes:
 
 ## Investigation Categories
 
+## Investigation Categories
+
+Each investigation includes:
+- Scenario description
+- Log source
+- Detection logic
+- Analyst findings
+- MITRE ATT&CK mapping
+- Recommended response actions
+
 ### ELK Investigations
-Hands-on log analysis using Elastic Stack.
+Hands-on log analysis using Elastic Stack.  
+➡️ View Folder: [ELK Investigations](./ELK-Investigations)
 
 ### Splunk Investigations
-SPL-based search, correlation, and dashboard analysis.
+SPL-based search, correlation, and dashboard analysis.  
+➡️ View Folder: [Splunk Investigations](./Splunk-Investigations)
 
 ### EDR Investigations
-Endpoint detection and response analysis workflows.
+Endpoint detection and response analysis workflows.  
+➡️ View Folder: [EDR Investigations](./EDR-Investigations)
 
 ### SOAR Investigations
-Automation and incident response playbook documentation.
-
----
-
-This portfolio demonstrates practical SOC Analyst Level 1 skills including:
-
-- Log analysis
-- Threat detection
-- Incident triage
-- MITRE ATT&CK mapping
-- Incident response workflow
+Automation and incident response playbook documentation.  
+➡️ View Folder: [SOAR Investigations](./Soar-Investigations)
