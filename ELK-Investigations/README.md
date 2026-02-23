@@ -1,11 +1,10 @@
-### MITRE ATT&CK Mapping
+## Investigation Summary
 
-Technique: T1110 – Brute Force  
-Tactic: Credential Access  
-
-Repeated failed authentication attempts may indicate brute-force activity targeting valid user accounts.
-
-# ELK Investigation Lab
+**Scenario:** Multiple failed VPN login attempts observed in ELK  
+**Detection Goal:** Identify potential brute-force activity  
+**Tool Used:** Elastic Stack (ELK)  
+**Data Source:** VPN authentication logs  
+**MITRE Mapping:** T1110 – Brute Force (Credential Access)
 
 ## Overview
 This lab documents hands-on investigation work using the Elastic Stack (ELK) as a SIEM platform.
