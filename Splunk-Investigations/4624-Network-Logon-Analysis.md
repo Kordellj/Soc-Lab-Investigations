@@ -21,6 +21,10 @@ index=main EventID=4624
 WORKSTATION5$ represents machine account authentication.
 James is a standard user account.
 
+## Step 1 – Baseline Successful Logons
+
+![Baseline LogonType Breakdown](../../screenshots/4624-baseline.png)
+
 ---
 
 ## Step 2 – Analyze Logon Type
@@ -35,6 +39,10 @@ index=main EventID=4624 TargetUserName=James
 - Logon Type 3 – Network Logon (3 occurrences)
 
 Logon Type 3 indicates network-based authentication (remote connection, SMB, etc.).
+
+## Step 2 – Logons From Specific IP
+
+![IP Specific Logons](../../screenshots/4624-ip-172.90.12.11.png)
 
 ---
 
