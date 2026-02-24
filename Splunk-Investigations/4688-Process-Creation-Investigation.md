@@ -27,24 +27,34 @@ Reviewed all created processes to identify potentially suspicious binaries.
 
 ---
 
-## 🔍 Step 2 – Investigate WMIC Usage
+## Step 2 – Investigate WMIC Execution
 
+### SPL Query
 ```spl
 index=main EventID=4688 NewProcessName="*wmic*"
 | table _time ParentProcessName NewProcessName CommandLine SubjectUserName
 | sort _time
 ```
 
-### Findings:
-- wmiprvse.exe observed
-- Launched net.exe
-- Executed under machine account (WORKSTATION6$)
-- WMIC is commonly used for remote execution and lateral movement
+### Findings
+- **ParentProcessName:** `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`
+- **NewProcessName:** `C:\Windows\System32\wbem\WMIC.exe`
+- **SubjectUserName:** `James`
 
-📸 Screenshot:
+### Analysis
+WMIC was launched from PowerShell under the user **James**.
+
+PowerShell spawning WMIC is noteworthy because:
+- WMIC can be used for remote command execution
+- It is commonly abused for lateral movement
+- It allows system and user enumeration
+
+In a real SOC investigation, this would warrant deeper review of:
+- The full command line arguments
+- Network connections during execution
+- Related authentication events (4624 logons)
+
 ![Step 2](screenshots/4688-wmic.png)
-
----
 
 ## 🔍 Step 3 – Investigate net.exe Usage
 
