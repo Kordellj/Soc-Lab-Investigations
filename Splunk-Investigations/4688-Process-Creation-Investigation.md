@@ -23,8 +23,7 @@ index=main EventID=4688
 Reviewed all created processes to identify potentially suspicious binaries.
 
 📸 Screenshot:
-![Step 1](screenshots/4688-overview.png)
-
+![Step 1](4688-Process-Creation-Investigation/screenshots/4688-overview.png)
 ---
 
 ## Step 2 – Investigate WMIC Execution
@@ -54,7 +53,8 @@ In a real SOC investigation, this would warrant deeper review of:
 - Network connections during execution
 - Related authentication events (4624 logons)
 
-![Step 2](screenshots/4688-wmic.png)
+📸 Screenshot:
+![Step 2](4688-Process-Creation-Investigation/screenshots/4688-wmic.png)
 
 ## 🔍 Step 3 – Investigate net.exe Usage
 
@@ -70,7 +70,7 @@ index=main EventID=4688 NewProcessName="*net.exe*"
 - net.exe can be used for user management and privilege modification
 
 📸 Screenshot:
-![Step 3](screenshots/4688-net.png)
+![Step 3](4688-Process-Creation-Investigation/screenshots/4688-net.png)
 
 ---
 
