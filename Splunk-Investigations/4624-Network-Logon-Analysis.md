@@ -23,7 +23,8 @@ James is a standard user account.
 
 ## Step 1 – Baseline Successful Logons
 
-![Baseline LogonType Breakdown](../../screenshots/4624-baseline.png)
+![4624 Baseline](../screenshots/4624-baseline.png)
+
 
 ---
 
@@ -42,7 +43,7 @@ Logon Type 3 indicates network-based authentication (remote connection, SMB, etc
 
 ## Step 2 – Logons From Specific IP
 
-![IP Specific Logons](../../screenshots/4624-ip-172.90.12.11.png)
+![4624 IP Analysis](../screenshots/4624-ip-172.90.12.11.png)
 
 ---
 
