@@ -1,4 +1,4 @@
-# Lab 6 – Suspicious Process Chain Investigation (PowerShell → WMIC → NET)
+# Lab 7 – Suspicious Process Chain Investigation (PowerShell → WMIC → NET)
 
 ## Objective
 
