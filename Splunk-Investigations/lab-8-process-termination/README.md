@@ -1,4 +1,4 @@
-# 🔍 Lab 11: Process Termination Analysis (Event ID 4689)
+# 🔍 Lab 8: Process Termination Analysis (Event ID 4689)
 
 ## 📌 Objective
 The objective of this lab was to analyze process termination events (Event ID 4689) in Splunk to identify potentially suspicious activity, such as attackers terminating processes to evade detection.
