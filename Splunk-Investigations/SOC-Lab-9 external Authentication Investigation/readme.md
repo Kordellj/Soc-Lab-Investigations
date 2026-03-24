@@ -41,7 +41,7 @@ index=main EventID=4624 LogonType=3
 Findings:  
 Some fields such as AccountName and WorkstationName were not populated, so I pivoted to the fields that contained useful data. The authentication type was consistently Kerberos, and I observed a repeated IP address (172.90.12.11) along with a repeated machine account (WORKSTATION5$).
 
-![Field Review](screenshots/step1-field-review.png)
+
 
 ---
 
@@ -56,7 +56,7 @@ index=main EventID=4624 LogonType=3
 Findings:  
 The IP address 172.90.12.11 generated 11 successful logon events, making it the most active source in the dataset. Other IP addresses were minimal or represented local/IPv6 traffic.
 
-![Top IP](screenshots/step2-top-ip.png)
+
 
 ---
 
@@ -70,7 +70,7 @@ index=main EventID=4624 IpAddress="172.90.12.11"
 Findings:  
 I observed repeated authentication attempts from 172.90.12.11 targeting the system WORKSTATION5$. There was also user activity involving “James.” All authentication events used Kerberos, which is typically associated with internal domain environments.
 
-![IP Breakdown](screenshots/step3-ip-breakdown.png)
+
 
 ---
 
